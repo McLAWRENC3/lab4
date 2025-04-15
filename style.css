@@ -1,0 +1,465 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Hero Banner Styling */
+.hero-banner {
+    background: url('images/bmw m4.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+.hero-banner h1, .hero-banner p {
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    z-index: 1;
+}
+
+/* Main Content Styling */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap; /* Ensure content can wrap on smaller screens */
+}
+
+.main-content section {
+    width: 48%; /* Default width for desktop */
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        flex-direction: column; /* Stack sections vertically on tablets */
+    }
+
+    .main-content section {
+        width: 100%; /* Each section takes up full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner h1 {
+        font-size: 2rem;
+    }
+
+    .hero-banner p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically on mobile */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Adjust margin for vertical stacking */
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .main-content section {
+        width: 100%; /* Full width for each section on mobile */
+        margin-bottom: 20px;
+    }
+
+    footer {
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Service Cards Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+.service-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hero Banner Text Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero-banner h1 {
+    animation: fadeIn 2s ease-in-out;
+}
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+/* Contact Form Styling */
+.contact-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ff6347;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.submit-btn {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff6347;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 15px;
+    }
+
+    .contact-form {
+        padding: 0;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 1rem;
+    }
+}
+/* Specific Styling for Intro and Sidebar Sections */
+.intro, .sidebar {
+    width: 48%;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Mobile & Tablet View Adjustments */
+@media (max-width: 1024px) {
+    .intro, .sidebar {
+        width: 100%; /* Stack vertically on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .intro, .sidebar {
+        width: 100%;
+        padding: 15px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  input, textarea {
+    padding: 8px;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  .response-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: green;
+  }
+  .team-section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  #loadUsersBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #userList {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  #userList li {
+    background: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .faq {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .faq-item {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+  }
+  
+  .question {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .answer {
+    display: none;
+    margin-top: 0.5rem;
+    color: #555;
+  }
+  
+  .answer.visible {
+    display: block;
+  }
+ /* Image Slider Styles */
+.image-slider {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slider-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Hide all images except the current one */
+  .slider-container img:not(:first-child) {
+    display: none;
+  }
+.dark-theme {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-theme a {
+  color: #a0e7ff;
+}
+
+.dark-theme header,
+.dark-theme footer {
+  background-color: #1e1e1e;
+}
+.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  .dark-theme a {
+    color: #a0e7ff;
+  }
+  
+  .dark-theme header,
+  .dark-theme footer {
+    background-color: #1e1e1e;
+  }
+    
+          
