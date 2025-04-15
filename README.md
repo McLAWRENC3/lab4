@@ -1,14 +1,29 @@
-# BeemerZone - Contact Page
+# CSC 4035 - Lab 4: Making the Website Interactive with JavaScript
 
-## Group Members
-- Lawrence B. Mkandawire (lawrence.b.mkandawire@cs.unza.zm) 2021409376
+lawrence mkandawire
+2021409376
 
-## Page Description
-The contact page allows users to send messages via a contact form. It includes fields for name, email, and message, along with a submit button that opens the user's email client.
+## Completed Features
 
-## Summary of Features Used
+- Theme toggle between light and dark mode on the home page.
+- Contact form validation with a custom thank-you message.
+- Fetch API integration that loads and displays a list of user names.
+- FAQ section with questions that expand and collapse answers.
+- Image slider that rotates images every 5 seconds.
 
-- **CSS Selectors**: Element, class, descendant, and pseudo-class selectors
-- **Layout**: Flexbox for navigation and form layout, CSS Grid for services section
-- **Responsive Design**: Media queries for tablets and mobile devices
-- **Effects**: CSS transitions for hover and focus states, simple animation for banner text
+## Project Structure
+
+- index.html
+- contact.html
+- style.css
+- script.js
+- images/
+- README.md
+
+## Submission
+
+- All features listed above are implemented.
+- A video demonstration has been recorded and submitted.
+- Source code is available on GitHub.
+- https://drive.google.com/drive/folders/10YXuxTNHDPF-hXfp6IapRP1BNF4g1BHQ?usp=drive_link
+
